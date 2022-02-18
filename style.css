@@ -1,3 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 img {
   /* object-fit: contain;
   max-height: 100%;
@@ -8,69 +14,79 @@ img {
 
 body {
   background-color: #f2eae1;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 #forside {
   display: grid;
-  grid-template: repeat(9, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
+
+  grid-template: repeat(3, 1fr);
   /* aspect-ratio: 16/9; */
-  /* height: 100vh;
-  width: 100vh; */
+   /* height: 100vh; */
+  width: 100vw; 
   min-height: 95vh;
   
 }
+
 
 #box1 {
   outline: solid red 1px;
   min-height: 5rem;
   background-image: url(/forsidebilleder/pexels-photo-3094033.jpeg);
-  grid-column: 1/3;
-  grid-row: 1/3;
+  /* grid-column: 1/3; */
+  /* grid-row: 1/3; */
+  grid-column: 1/1;
+  grid-row: 1/1;
   background-size: cover;
+  background-position: center;
 }
 
 #box2 {
   outline: solid red 1px;
   min-height: 5rem;
   background-image: url(/forsidebilleder/pexels-photo-4706115.jpeg);
-  grid-column: 1/3;
-  grid-row: 3/6;
+  grid-column: 1/1;
+  grid-row: 2/2;
   background-size: cover;
+  background-position: center;
 }
 
 #box3 {
   outline: solid red 1px;
   min-height: 5rem;
   background-color: #737864;
-  grid-column: 1/3;
-  grid-row: 6/9;
+  grid-column: 1/1;
+  grid-row: 3/3;
 }
 
 #box4 {
   outline: solid red 1px;
   min-height: 5rem;
   background-color: #737864;
-  grid-column: 3/6;
-  grid-row: 1/3;
+  grid-column: 2/2;
+  grid-row: 1/2;
 }
 
 #box5 {
   outline: solid red 1px;
   min-height: 5rem;
   background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
-  grid-column: 3/6;
-  grid-row: 3/9;
+  grid-column: 2/2;
+  grid-row: 2/4;
   background-size: cover;
+  background-position: center;
 }
 
 #box6 {
   outline: solid red 1px;
   min-height: 5rem;
   background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
-  grid-column: 6/9;
-  grid-row: 1/9;
+  grid-column: 3/3;
+  grid-row: 1/4;
   background-size: cover;
+  background-position: center;
 }
 
 footer {
