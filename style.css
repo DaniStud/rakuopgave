@@ -4,8 +4,6 @@
 }
 
 
-
-
 #box1 {
     outline: solid red 1px;
     min-height: 5rem;
@@ -57,3 +55,37 @@
     grid-row: 1/9;
     background-size: cover;
 }
+
+footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+    outline: solid 1px black;
+    text-align: center;
+    padding: 1rem;
+ }
+
+ footer p {
+    grid-row: 1/1;
+    text-align: left;
+ }
+
+ footer #kat {
+    grid-row: 2/2;
+ }
+
+ footer #nie {
+    grid-row: 2/2;
+ }
+ 
+ footer #flo {
+    grid-row: 2/2;
+ }
+
+ footer #rie {
+    grid-row: 3/3;
+ }
+
+ footer #dav {
+    grid-row: 3/3;
+ }
