@@ -72,13 +72,13 @@ footer {
 
  footer p {
     grid-row: 1/1;
-    text-align: left;
+    /* text-align: left; */
     margin-top: -.5rem;
  }
 
  footer .topfoot {
     grid-row: 2/2;
-    margin-left: -4rem;
+    margin-left: -7rem;
  }
 
  footer .buttomfoot {
@@ -91,7 +91,8 @@ footer {
      grid-row: 2/2;
      margin-top: 1rem;
      justify-content: right;
-     outline: solid 1px white;
+     outline: solid 1px black;
+     padding: .2rem;
      max-height: 5vh;
      max-width: 5vh;
  }
