@@ -63,29 +63,29 @@ footer {
     outline: solid 1px black;
     text-align: center;
     padding: 1rem;
+    margin-top: 5rem;
  }
 
  footer p {
     grid-row: 1/1;
     text-align: left;
+    margin-top: -.5rem;
  }
 
- footer #kat {
+ footer .topfoot {
     grid-row: 2/2;
+    margin-left: -4rem;
  }
 
- footer #nie {
-    grid-row: 2/2;
- }
- 
- footer #flo {
-    grid-row: 2/2;
- }
-
- footer #rie {
+ footer .buttomfoot {
     grid-row: 3/3;
+    margin-left: 4rem;
+    
  }
 
- footer #dav {
-    grid-row: 3/3;
+ #toppy {
+     grid-row: 2/2;
+     margin-top: 1rem;
+     outline: solid 1px grey;
+     
  }
