@@ -1,6 +1,7 @@
 const main = document.querySelector("#info");
 const template = document.querySelector("template").content;
 const header = document.querySelector("h1");
+const modal = document.querySelector("#modal");
 // const section = document.querySelector;
 
 const url = "https://keramik-b835.restdb.io/rest/keramik";
@@ -73,3 +74,15 @@ function vis() {
     }
   });
 }
+
+// modal
+function visDetaljer(keramik) {
+    console.log("modal");
+    modal.querySelector("h2").textContent = keramik.overskrift;
+    modal.querySelector("img").src = "/keramik/" + keramik.billede;
+    modal.style.display = "block";
+  }
+
+  modal.addEventListener("click", () => (modal.style.display = "none"));
+  hentdata();
+
