@@ -8,16 +8,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-    <section id="forside">
+    <main>
+      <section id="forside">
         <div id="box1"></div>
         <div id="box2"></div>
         <div id="box3"></div>
         <div id="box4"></div>
         <div id="box5"></div>
         <div id="box6"></div>
-    </section>
+      </section>
 
+      <h1 id="overskrift">Alle kunstnere</h1>
+      <nav>
+        <button data-kunstnere="Alle" class="valgt">Alle kunstnere</button>
+        <button data-kunstnere="Niels">Niels</button>
+        <button data-kunstnere="Katrine">Katrine</button>
+        <button data-kunstnere="Flora">Flora</button>
+        <button data-kunstnere="Rie">Rie</button>
+        <button data-kunstnere="David">David</button>
+      </nav>
+      <h2>Billedegalleri</h2>
+      <section id="info">
+        <template>
+          <article>
+            <img src="" alt="" />
+            <h2 class="overskrift"></h2>
+            <p class="tekst"></p>
+            <p class="billede"></p>
+          </article>
+        </template>
+      </section>
+    </main>
 
     <footer>
       <p><b>Besøg kunstnernes sider</b></p>
@@ -26,10 +47,11 @@
       <a class="topfoot" href="hjemmeside">Flora</a>
       <a class="buttomfoot" href="hjemmeside">Rie</a>
       <a class="buttomfoot" href="hjemmeside">David</a>
-      
-     
-      <a id=toppy href="index.html"><img src="/iconsvg/arrow.svg" alt="pil"></a>
-  </footer>
+
+      <a id="toppy" href="index.html"
+        ><img src="/iconsvg/arrow.svg" alt="pil"
+      /></a>
+    </footer>
 
     <script src="index.js"></script>
   </body>
