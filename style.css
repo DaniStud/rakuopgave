@@ -21,13 +21,11 @@ body {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr; */
-
   grid-template: repeat(3, 1fr);
   /* aspect-ratio: 16/9; */
    /* height: 100vh; */
   width: 100vw; 
   min-height: 95vh;
-  
 }
 
 
@@ -82,12 +80,14 @@ body {
 #box6 {
   outline: solid red 1px;
   min-height: 5rem;
-  background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
+  background-image: url(/mobilebox.jpeg);
   grid-column: 3/3;
   grid-row: 1/4;
   background-size: cover;
   background-position: center;
 }
+
+
 
 footer {
   display: grid;
@@ -184,4 +184,12 @@ article {
     max-width: 900px;
     margin: auto;
     background-color: white;
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    #forside {
+      min-height: 66vh;
+      /* background-image: url(/mobilebox6.jpeg) */
+    }
   }
