@@ -12,6 +12,11 @@ img {
   object-fit: cover;
 }
 
+header {
+background-color: #f2eae1;
+min-height: 10vh;
+}
+
 body {
   background-color: #f2eae1;
   /* padding: 1rem; */
@@ -25,7 +30,7 @@ body {
   /* aspect-ratio: 16/9; */
    /* height: 100vh; */
   width: 100vw; 
-  min-height: 95vh;
+  min-height: 90vh;
 }
 
 
