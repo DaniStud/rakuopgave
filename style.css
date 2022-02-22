@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -28,11 +28,16 @@ body {
   grid-template-rows: 1fr 1fr 1fr; */
   grid-template: repeat(3, 1fr);
   /* aspect-ratio: 16/9; */
+<<<<<<< HEAD
    /* height: 100vh; */
   width: 100vw; 
   min-height: 90vh;
+=======
+  /* height: 100vh; */
+  width: 100vw;
+  min-height: 95vh;
+>>>>>>> 91906caac989e7c24dfa8771b0535f80294489dd
 }
-
 
 #box1 {
   outline: solid red 1px;
@@ -91,8 +96,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-
 
 footer {
   display: grid;
@@ -168,33 +171,130 @@ h1 {
   background-color: #737864;
 }
 
-
 /* modal fra øvelsen */
 
 article {
-    border: 1px solid #333;
-    padding: 10px;
-    margin: 1em;
-  }
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 1em;
+}
 
 #modal {
-    display: none;
-    width: 100vh;
-    height: 100vh;
-    position: fixed;
-    background-color: #00000055;
+  display: none;
+  width: 100vh;
+  height: 100vh;
+  position: fixed;
+  background-color: #00000055;
+}
+
+#modal article {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+}
+
+/* footer */
+
+footer {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  border: 1px solid;
+  height: auto;
+  width: 100vw;
+  color: black;
+}
+
+.overskrift {
+  padding: 0 6%;
+  margin-top: 3%;
+}
+
+.footerindhold {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5%;
+}
+
+.footerindhold h3 {
+  margin: 2%;
+}
+
+.kontakter2 {
+  grid-column: 1;
+}
+
+.knap {
+  text-align: center;
+}
+
+.knap img {
+  transition: 0.2s;
+  border: 1px solid;
+  color: black;
+  width: 50px;
+  margin-top: 3%;
+}
+
+.knap img:hover {
+  background-color: #f2e5d5;
+}
+
+button {
+  background-color: #f2eae1;
+  padding: 5px;
+  border: 2px solid #737864;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .kontakter1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
   }
 
-  #modal article {
-    max-width: 900px;
-    margin: auto;
-    background-color: white;
+  .kontakter2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2%;
   }
 
-  
-  @media only screen and (max-width: 600px) {
-    #forside {
-      min-height: 66vh;
-      /* background-image: url(/mobilebox6.jpeg) */
-    }
+  .knap {
+    text-align: end;
   }
+
+  .footerindhold {
+    display: grid;
+    grid-template-columns: 1fr 0.01fr;
+    padding: 0 3%;
+  }
+
+  .overskrift {
+    padding: 0 3%;
+  }
+
+  .center h3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #forside {
+    min-height: 66vh;
+    /* background-image: url(/mobilebox6.jpeg) */
+  }
+}
