@@ -59,7 +59,7 @@ function vis() {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = keramik.overskrift;
       klon.querySelector(".tekst").textContent = keramik.tekst;
-      klon.querySelector(".billede").textContent = keramik.billede;
+      // klon.querySelector(".billede").textContent = keramik.billede;
 
       klon.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
 
@@ -77,12 +77,12 @@ function vis() {
 
 // modal
 function visDetaljer(keramik) {
-    console.log("modal");
-    modal.querySelector("h2").textContent = keramik.overskrift;
-    modal.querySelector("img").src = "/keramik/" + keramik.billede;
-    modal.style.display = "block";
-  }
+  console.log("modal");
+  modal.querySelector("h2").textContent = keramik.overskrift;
+  modal.querySelector(".tekst").textContent = keramik.tekst;
+  modal.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
+  modal.style.display = "block";
+}
 
-  modal.addEventListener("click", () => (modal.style.display = "none"));
-  hentdata();
-
+modal.addEventListener("click", () => (modal.style.display = "none"));
+hentdata();
