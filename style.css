@@ -241,27 +241,20 @@ h1 {
 /* ændringer ^^ - link til hjemmeside */
 
 /* footer */
-
 footer {
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0; */
-  border: 1px solid;
   height: auto;
   width: 100vw;
-  color: black;
+  background-color: #737864;
 }
 
-.overskrift {
-  padding: 0 6%;
-  margin-top: 3%;
+footer h3,
+footer h2 {
+  color: #f2e5d5;
 }
 
 .footerindhold {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 5%;
 }
 
 .footerindhold h3 {
@@ -292,7 +285,6 @@ button {
   background-color: #f2eae1;
   padding: 5px;
   border: 2px solid #737864;
-
   transition: 0.2s;
 }
 
@@ -305,6 +297,10 @@ nav {
   justify-content: center;
 
   gap: 30px;
+}
+
+.overskrift h2 {
+  text-align: left;
 }
 
 @media (min-width: 900px) {
