@@ -536,3 +536,9 @@ footer {
     flex-flow: column;
   }
 }
+
+
+@media (max-width: 600px) {
+header  {
+  position: fixed;
+}
