@@ -96,7 +96,7 @@ function vis() {
     if (filter == keramik.fornavn || filter == "Alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = keramik.overskrift;
-      klon.querySelector(".tekst").textContent = keramik.tekst;
+      klon.querySelector(".tekst").textContent = keramik.korttekst;
       // klon.querySelector(".billede").textContent = keramik.billede;
 
       klon.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
@@ -137,7 +137,7 @@ function visBillede() {
 function visDetaljer(keramik) {
   console.log("modal");
   modal.querySelector("h2").textContent = keramik.overskrift;
-  modal.querySelector(".tekst").textContent = keramik.tekst;
+  modal.querySelector(".tekst").textContent = keramik.langtekst;
   modal.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
   modal.style.display = "block";
 }
