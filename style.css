@@ -115,6 +115,11 @@ body {
   background-color: #737864;
   grid-column: 1/1;
   grid-row: 3/3;
+  text-align: center;
+}
+
+#box3 h2 {
+  margin-top: 5rem;
 }
 
 #box4 {
