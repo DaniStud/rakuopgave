@@ -119,11 +119,18 @@ body {
 
 #box4 {
   min-height: 5rem;
-  background-image: url(/forsidebilleder/ceramic\ galleri.svg);
+  background-color: #737864;
   background-size: cover;
   grid-column: 2/2;
   grid-row: 1/2;
+  text-align: center;
+  padding-top: 5rem;
 }
+
+  #splashtoph2 {
+    margin-bottom: 1rem;
+    text-decoration: underline solid black 2px;
+  }
 
 #box5 {
   min-height: 5rem;
