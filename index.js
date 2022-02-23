@@ -1,21 +1,50 @@
+// keramik
 const main = document.querySelector("#info");
-const template = document.querySelector("template").content;
+const template = document.querySelector("#info template").content;
 const header = document.querySelector("h1");
 const modal = document.querySelector("#modal");
 // const section = document.querySelector;
 
-const url = "https://keramik-b835.restdb.io/rest/keramik";
+// keramiker
+const mainKera = document.querySelector("#personer");
+const templateKera = document.querySelector("#personer template").content;
 
+// -------------------------------------------
+
+// keramik
+const url = "https://keramik-b835.restdb.io/rest/keramik";
+// keramikere
+const urlKera = "https://keramiker-bb19.restdb.io/rest/keramiker";
+
+// -------------------------------------------
+
+// keramik - key
 const options = {
   headers: {
     "x-apikey": "620e544834fd621565858733",
   },
 };
 
+// keramikere - key
+const optionsKera = {
+  headers: {
+    "x-apikey": "6214e9df34fd621565858906",
+  },
+};
+
+// -------------------------------------------
+
+// keramik
 let json;
 let filter = "Alle";
 let keramik;
 let kategori;
+
+// keramikere
+let keramiker;
+let fornavn;
+
+// -------------------------------------------
 
 document.addEventListener("DOMContentLoaded", start);
 
@@ -32,13 +61,14 @@ function start() {
 
 function filtrerKategori() {
   console.log("filtrer");
-  filter = this.dataset.kunstnere;
+  filter = this.dataset.fornavn;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 
   // overskrifter skifter mellem kategorierne
   header.textContent = this.textContent;
   vis();
+  visBillede();
 }
 
 async function hentData() {
@@ -46,7 +76,15 @@ async function hentData() {
   // console.log(resspons);
   keramik = await resspons.json();
   // console.log("keramik");
+
+  // keramiker herunder
+  const ressponsKera = await fetch(urlKera, optionsKera);
+  // console.log(resspons);
+  keramiker = await ressponsKera.json();
+  console.log(keramiker);
   vis();
+  // keramiker
+  visBillede();
 }
 
 function vis() {
@@ -55,7 +93,7 @@ function vis() {
 
   keramik.forEach((keramik) => {
     console.log("forEach");
-    if (filter == keramik.kunstnere || filter == "Alle") {
+    if (filter == keramik.fornavn || filter == "Alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = keramik.overskrift;
       klon.querySelector(".tekst").textContent = keramik.tekst;
@@ -63,14 +101,34 @@ function vis() {
 
       klon.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
 
-      // klon.querySelector("img").src =
-      // "/keramik/rie/" + keramik.billede + ".jpg";
-      // laver en anonym funktion ()=> som kan kalde en ny fuktion nedeudner - så kommer dataten (JSON) med ned i funktionen
       klon
         .querySelector("article")
         .addEventListener("click", () => visDetaljer(keramik));
 
       main.appendChild(klon);
+    }
+  });
+}
+
+// keramiker herunder
+function visBillede() {
+  mainKera.textContent = "";
+  // mainKera.style.display = "block";
+  console.log("kerA");
+
+  keramiker.forEach((kunstner) => {
+    console.log("forEach");
+    if (filter == kunstner.fornavn) {
+      console.log("filter");
+      const klonKera = templateKera.cloneNode(true);
+      klonKera.querySelector(".fornavn").textContent = kunstner.fornavn;
+      klonKera.querySelector(".efternavn").textContent = kunstner.Efternavn;
+      klonKera.querySelector(".om").textContent = kunstner.Om;
+
+      klonKera.querySelector("img").src =
+        "/profil/" + kunstner.billede + ".jpg";
+
+      mainKera.appendChild(klonKera);
     }
   });
 }
@@ -85,4 +143,4 @@ function visDetaljer(keramik) {
 }
 
 modal.addEventListener("click", () => (modal.style.display = "none"));
-hentdata();
+// hentdata();
