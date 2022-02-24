@@ -27,13 +27,12 @@ img {
   gap: 20px;
   font-family: "Raleway", sans-serif;
   margin: 15px 0;
-  background-color: #737864;
   padding-left: 70px;
 }
 
-.li a:hover {
+/* .li a:hover {
   color: #ffffff;
-}
+} */
 
 .li a {
   color: rgb(0, 0, 0);
@@ -54,7 +53,7 @@ header {
 
 #headernav .element_2 {
   display: flex;
-  gap: 60px;
+  gap: 70px;
   margin: 10px;
   font-size: 1.2rem;
   /* margin-left: 50px; */
@@ -63,10 +62,6 @@ header {
 @media (min-width: 570px) {
   .ul {
     background-color: #f2eae1;
-  }
-
-  .li a:hover {
-    color: #737864;
   }
 }
 
@@ -434,7 +429,6 @@ footer {
   padding: 2rem;
 }
 
-
 /* ------------------------------------------- */
 
 /* web version */
@@ -603,7 +597,7 @@ footer {
   }
 
   #headernav.shown {
-    border-top: 3px solid #737864;
+    border-top: 5px solid #737864;
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
