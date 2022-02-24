@@ -184,6 +184,7 @@ body {
 
 #personer .fornavn {
   margin-top: 20px;
+  text-align: center;
 }
 #personer .efternavn {
   margin-top: 20px;
@@ -216,6 +217,7 @@ body {
 #info .element_2 {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 .billedegalleri {
   margin-left: 140px;
@@ -267,6 +269,7 @@ button {
   cursor: pointer;
   min-width: 3rem;
   margin: 7px;
+  font-size: 1rem;
 }
 
 @media (min-width: 500px) {
@@ -339,8 +342,18 @@ button:hover {
   margin-left: -200px;
 }
 #modal article .element_2 .hjemmeside_knap {
-  text-align: center;
-  margin: 30px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#modal article .element_2 .hjemmeside_knap a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+
+#modal article .element_2 .hjemmeside_knap a:hover {
+  color: #737864;
 }
 
 #modal article .element_3 {
