@@ -14,6 +14,7 @@ html {
 img {
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 /* ------------------------------------------- */
@@ -30,16 +31,18 @@ ul {
   justify-content: space-between;
   gap: 70px;
   font-family: "Raleway", sans-serif;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   /* min-height: 10vh; */
+  margin: 25px;
 }
 
 ul .element_2 {
   display: flex;
   gap: 40px;
+  margin: 10px;
 }
 ul .element_1 {
-  width: 20px;
+  width: 10px;
 }
 
 li a {
@@ -60,7 +63,7 @@ header {
 }
 
 #headernav .element_1 {
-  width: 50%;
+  width: 15%;
 }
 
 /* ------------------------------------------- */
@@ -193,12 +196,16 @@ body {
   column-count: 1;
   gap: 50px;
   background-color: white;
-  padding: 60px;
+  padding: 20px;
+}
+.hvem {
+  background-color: white;
+  padding: 20px;
 }
 
-.start_tekst .element_1 {
-  padding-bottom: 20px;
-}
+/* .start_tekst .element_1 {
+  padding-bottom: 50px;
+} */
 
 /* ------------------------------------------- */
 
@@ -211,7 +218,7 @@ body {
   background-color: #f2eae1;
 }
 
-#personer .fornavn {
+/* #personer .fornavn {
   z-index: 0;
   top: 272%;
   left: 30%;
@@ -230,7 +237,7 @@ body {
   font-size: 1.5rem;
   top: 280%;
   left: 45%;
-}
+} */
 #personer .om {
   margin: 20px;
   line-height: 1.5rem;
@@ -289,7 +296,7 @@ h3 {
 p {
   font-family: "Raleway", sans-serif;
   line-height: 1.5rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   /* padding: 50px; */
 }
 
@@ -301,7 +308,7 @@ button {
   cursor: pointer;
 }
 
-nav {
+.filterpersoner {
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -409,59 +416,10 @@ footer {
 
 /* ------------------------------------------- */
 
-/* tablet */
-@media (min-width: 550px) {
-  nav {
-    display: flex;
-    justify-content: center;
-  }
-  #headernav {
-    gap: 30px;
-  }
-  #headernav .element_1 {
-    width: 20%;
-  }
-
-  #personer .fornavn {
-    text-align: center;
-    top: 245%;
-    left: 45%;
-    gap: 20%;
-    text-decoration: double;
-    font-weight: bold;
-  }
-  #personer .efternavn {
-    width: 1px;
-    top: 220%;
-    left: 31%;
-    transform: rotate(-90deg);
-    text-align: center;
-    position: absolute;
-    font-size: 1.5rem;
-  }
-  #personer img {
-    width: 300px;
-    min-height: 50vh;
-    box-shadow: 20px 20px #737864;
-    /* padding: 0px; */
-    margin-left: 33%;
-    margin-top: 20px;
-    /* border: 10px solid blue; */
-  }
-  #personer article {
-    display: grid;
-    align-items: center;
-    /* padding-top: 100px;
-    padding-left: 300px; */
-  }
-}
-
-/* ------------------------------------------- */
-
 /* web verison */
-@media (min-width: 900px) {
+@media (min-width: 500px) {
   /* nav */
-  nav {
+  .filterpersoner {
     display: flex;
     justify-content: center;
   }
@@ -469,11 +427,11 @@ footer {
     gap: 30px;
   }
   #headernav .element_1 {
-    width: 20%;
+    width: 15%;
   }
 
   /* kunstnerne */
-  #personer .fornavn {
+  /* #personer .fornavn {
     text-align: center;
     top: 240%;
     left: 43%;
@@ -489,14 +447,25 @@ footer {
     text-align: center;
     position: absolute;
     font-size: 1.5rem;
+  } */
+  #personer .element_1 {
+    display: flex;
+    justify-content: center;
   }
+  #personer .element_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
   #personer img {
-    width: 300px;
-    min-height: 50vh;
+    /* width: 400px;
+    height: 300px; */
+    max-width: 300px;
     box-shadow: 20px 20px #737864;
-    /* padding: 0px; */
-    margin-left: 40%;
+    /* margin-left: 40%; */
     margin-top: 20px;
+    grid-column: 2/3;
     /* border: 10px solid rebeccapurple; */
   }
   #personer article {

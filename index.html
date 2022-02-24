@@ -48,11 +48,10 @@
       </section>
 
       <!-- ændringer herunder -->
-      <div class="start_tekst">
-        <div class="element_1">
+        <div class="hvem">
           <h2>Hvem er vi?</h2>
         </div>
-        
+      <div class="start_tekst">
         <div class="element_2">
           <p>
           Vi er fem keramikere der blev færdiguddannede fra Det Kongelige Kunstakademi tilbage i 2019. Her valgte vi at skabe en online platform med mulighed for at udstille vores værker løbende. Målet var at lave en hjemmeside som både fungerer som vores individuelle online porteføljer, men et sted man også kan besøge for at finde inspiration. Hjemmesiden bliver løbende opdateret, da vi også gerne vil give upcoming-keramikere en mulighed for at udstille på hjemmesiden. I denne udstilling har vi alle haft samme udgangspunkt, nemlig: minimalisme og kontrasten mellem stringente former og organisk materiale.
@@ -67,6 +66,7 @@
       </id>
 
       <!-- <section class="navresponsive"> -->
+        <div class="filterpersoner">
       <nav>
         <button data-fornavn="Alle" class="valgt">Alle kunstnere</button>
         <button data-fornavn="Niels">Niels</button>
@@ -75,17 +75,21 @@
         <button data-fornavn="Rie">Rie</button>
         <button data-fornavn="David">David</button>
       </nav>
+      </div>
       <!-- </section> -->
 
  <!-- keramiker restdb -->
       <section id="personer">
         <template>
           <article>
+            <div class="element_1">
             <img src="" alt="" />
-            <p class="fornavn"></p>
-            <p class="efternavn"></p>
+            </div>
+            <div class="element_2">
+            <h2 class="fornavn"></h2>
+            <h2 class="efternavn"></h2>
+            </div>
             <div class="element_3">
-              <p class="navne">Niels Berthelsen</p>
             <p class="om"></p>
             </div>
           </article>
