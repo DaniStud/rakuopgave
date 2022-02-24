@@ -48,6 +48,7 @@ let fornavn;
 
 document.addEventListener("DOMContentLoaded", start);
 
+// funktion der fortæller at når man klikker skal den gå ned til functionen "filtrerkategori"
 function start() {
   // console.log("start");
   // alle knapperne
@@ -59,7 +60,7 @@ function start() {
   hentData();
 }
 
-// filtrer i vores json (fornavne)
+// filtrer i vores json (fornavne) og skal vise funktionerne vis() og visBillede()
 function filtrerKategori() {
   // console.log("filtrer")
   filter = this.dataset.fornavn;
@@ -118,7 +119,7 @@ function vis() {
   });
 }
 
-// keramiker herunder
+// keramiker herunder med indhold
 function visBillede() {
   mainKera.textContent = "";
   // mainKera.style.display = "block";
@@ -132,8 +133,9 @@ function visBillede() {
     if (filter == kunstner.fornavn) {
       // console.log("filter");
       const klonKera = templateKera.cloneNode(true);
-      klonKera.querySelector(".fornavn").textContent = kunstner.fornavn;
-      klonKera.querySelector(".efternavn").textContent = kunstner.Efternavn;
+      klonKera.querySelector(".fornavn").textContent =
+        kunstner.fornavn + " " + kunstner.Efternavn;
+
       klonKera.querySelector(".om").textContent = kunstner.Om;
 
       klonKera.querySelector("img").src =
@@ -178,10 +180,10 @@ function toggleMenu() {
   // 1. Lav en if/else sætning => if (...) {...} else {...}
   // 2. Spørg om menu i if-sætningen => if (menu)
   if (menuShown) {
-    btn.textContent = "Luk";
+    btn.textContent = "X";
     // hvis nav har klassen "shown", sæt da btn.textContent til "Luk"
   } else {
-    btn.textContent = "Menu";
+    btn.textContent = "☰";
     // hvis IKKE nav har klassen "shown", sæt da btn.textContent til "Menu"
   }
 }
