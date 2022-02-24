@@ -49,7 +49,7 @@ let fornavn;
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
-  console.log("start");
+  // console.log("start");
   // alle knapperne
   const filterKnapper = document.querySelectorAll("nav button");
   // looper, der er eventlistener på hver knap
@@ -59,8 +59,9 @@ function start() {
   hentData();
 }
 
+// filtrer i vores json (fornavne)
 function filtrerKategori() {
-  console.log("filtrer");
+  // console.log("filtrer")
   filter = this.dataset.fornavn;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
@@ -71,28 +72,35 @@ function filtrerKategori() {
   visBillede();
 }
 
+// henter vores json data fra rest db
+// keramik
 async function hentData() {
   const resspons = await fetch(url, options);
   // console.log(resspons);
   keramik = await resspons.json();
   // console.log("keramik");
 
-  // keramiker herunder
+  // keramiker
   const ressponsKera = await fetch(urlKera, optionsKera);
   // console.log(resspons);
   keramiker = await ressponsKera.json();
-  console.log(keramiker);
+  // console.log(keramiker);
+
+  // keramik
   vis();
+
   // keramiker
   visBillede();
 }
 
+// en funktion der indeholder alt indhold fra json, og den filtrer efter hvilket fornavn du klikker på
 function vis() {
   // console.log(keramik);
   main.textContent = "";
 
+  // for hver keramik (person) du klikker på. viser den en overskift, korttest og billede. og herefter kloner den og looper forfra
   keramik.forEach((keramik) => {
-    console.log("forEach");
+    // console.log("forEach");
     if (filter == keramik.fornavn || filter == "Alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = keramik.overskrift;
@@ -114,12 +122,15 @@ function vis() {
 function visBillede() {
   mainKera.textContent = "";
   // mainKera.style.display = "block";
-  console.log("kerA");
+  // console.log("kerA");
 
+  // her sker det samme bare med vores kunstnere, da de skal have hver deres billede når man klikker på deres navn
   keramiker.forEach((kunstner) => {
-    console.log("forEach");
+    // console.log("forEach");
+
+    // for hver gang man klikker på et navn kommer der et fornavn, efternavn og en tekst om personen samt et billede
     if (filter == kunstner.fornavn) {
-      console.log("filter");
+      // console.log("filter");
       const klonKera = templateKera.cloneNode(true);
       klonKera.querySelector(".fornavn").textContent = kunstner.fornavn;
       klonKera.querySelector(".efternavn").textContent = kunstner.Efternavn;
@@ -132,31 +143,32 @@ function visBillede() {
     }
   });
 }
-
+// modal vinduet der kommer frem når man klikker på en af elementerne, her kommer det samme frem dog bare med en lang tekst istedet for en kort
 // modal
 function visDetaljer(keramik) {
-  console.log("modal");
+  // console.log("modal");
   modal.querySelector("h2").textContent = keramik.overskrift;
   modal.querySelector(".tekst").textContent = keramik.langtekst;
   modal.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
+
+  // det ligger sig ovenpå
   modal.style.display = "block";
 }
-
+// så modal vinduet forsvinder når man klikker igen
 modal.addEventListener("click", () => (modal.style.display = "none"));
 // hentdata();
 
-
-// burger menu 
+// burger menu
 // Lav en variabel, der refererer til ".toggle-btn"
 const btn = document.querySelector(".toggle-btn");
 // Lav en variabel, der refererer til "nav"
 const headernav = document.querySelector("#headernav");
 
 // Lav en function, der hedder toggleMenu()
-function toggleMenu () {
-  console.log("toggleMenu")
+function toggleMenu() {
+  // console.log("toggleMenu");
   // 1. Toggle en klasse på nav vha. classList.toggle
-  headernav.classList.toggle("shown")
+  headernav.classList.toggle("shown");
   // 2. Toggle en klasse, der hedder "shown"
 
   // 1. Lav en variabel, der hedder menuShown
@@ -166,7 +178,7 @@ function toggleMenu () {
   // 1. Lav en if/else sætning => if (...) {...} else {...}
   // 2. Spørg om menu i if-sætningen => if (menu)
   if (menuShown) {
-     btn.textContent = "Luk";
+    btn.textContent = "Luk";
     // hvis nav har klassen "shown", sæt da btn.textContent til "Luk"
   } else {
     btn.textContent = "Menu";
