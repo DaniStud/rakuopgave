@@ -82,6 +82,7 @@ body {
 .splashlogo img {
   max-width: 250px;
 }
+
 .box4 img {
   justify-content: center;
 }
@@ -217,6 +218,10 @@ body {
 
 @media (min-width: 500px) {
   /* SPLASH */
+
+  .splashlogo {
+    padding: 55px;
+  }
   #box5 {
     display: block;
     min-height: 5rem;
@@ -433,6 +438,7 @@ footer {
   }
 
   #box3 h2 {
+    padding: 0 5%;
     margin-top: 5rem;
   }
 
@@ -443,7 +449,6 @@ footer {
     grid-column: 2/2;
     grid-row: 1/2;
     text-align: center;
-    padding-top: 5rem;
   }
 
   #box5 {
