@@ -108,7 +108,7 @@ function vis() {
       klon.querySelector(".tekst").textContent = keramik.korttekst;
       // klon.querySelector(".billede").textContent = keramik.billede;
 
-      klon.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
+      klon.querySelector("img").src = "keramik/" + keramik.billede + ".jpg";
 
       klon
         .querySelector("article")
@@ -138,8 +138,7 @@ function visBillede() {
 
       klonKera.querySelector(".om").textContent = kunstner.Om;
 
-      klonKera.querySelector("img").src =
-        "/profil/" + kunstner.billede + ".jpg";
+      klonKera.querySelector("img").src = "profil/" + kunstner.billede + ".jpg";
 
       mainKera.appendChild(klonKera);
     }
@@ -151,7 +150,7 @@ function visDetaljer(keramik) {
   // console.log("modal");
   modal.querySelector("h2").textContent = keramik.overskrift;
   modal.querySelector(".tekst").textContent = keramik.langtekst;
-  modal.querySelector("img").src = "/keramik/" + keramik.billede + ".jpg";
+  modal.querySelector("img").src = "keramik/" + keramik.billede + ".jpg";
 
   // det ligger sig ovenpå
   modal.style.display = "block";
