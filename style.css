@@ -302,10 +302,11 @@ p {
 
 button {
   background-color: #73786473;
-  padding: 5px;
+  padding: .2rem;
   font-family: "Raleway", sans-serif;
   line-height: 1.5rem;
   cursor: pointer;
+  min-width: 3rem;
 }
 
 .filterpersoner {
