@@ -29,7 +29,7 @@ ul {
   /* background-color: #f2eae1; */
   display: flex;
   justify-content: space-between;
-  gap: 70px;
+  gap: 40px;
   font-family: "Raleway", sans-serif;
   /* margin-right: 20px; */
   /* min-height: 10vh; */
@@ -63,7 +63,7 @@ header {
 }
 
 #headernav .element_1 {
-  width: 15%;
+  width: 50%;
 }
 
 /* ------------------------------------------- */
@@ -552,8 +552,8 @@ footer {
   }
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   header {
     position: fixed;
   }
-} */
+}

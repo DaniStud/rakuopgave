@@ -178,10 +178,10 @@ function toggleMenu() {
   // 1. Lav en if/else sætning => if (...) {...} else {...}
   // 2. Spørg om menu i if-sætningen => if (menu)
   if (menuShown) {
-    btn.textContent = "Luk";
+    btn.textContent = "X";
     // hvis nav har klassen "shown", sæt da btn.textContent til "Luk"
   } else {
-    btn.textContent = "Menu";
+    btn.textContent = "☰";
     // hvis IKKE nav har klassen "shown", sæt da btn.textContent til "Menu"
   }
 }
