@@ -205,6 +205,13 @@ body {
 }
 
 @media (min-width: 1200px) {
+  #forside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    min-height: 90vh;
+  }
+
   #box6 {
     display: block;
     min-height: 5rem;
@@ -220,7 +227,7 @@ body {
   /* SPLASH */
 
   .splashlogo {
-    padding: 55px;
+    padding: 25px 0px;
   }
   #box5 {
     display: block;
@@ -413,12 +420,6 @@ footer {
 @media (min-width: 500px) {
   /* forside skærmen */
 
-  #forside {
-    display: grid;
-    width: 100vw;
-    min-height: 90vh;
-  }
-
   /* Splash pc */
   #box2 {
     min-height: 5rem;
@@ -437,10 +438,11 @@ footer {
     text-align: center;
   }
 
-  #box3 h2 {
-    padding: 5%;
-    margin-top: 3rem;
+  #box3 p {
+    margin-top: 4rem;
     line-height: 110%;
+    color: #f2eae1;
+    font-size: 1.5rem;
   }
 
   #box4 {
