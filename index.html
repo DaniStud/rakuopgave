@@ -7,28 +7,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <!-- ændringer herunder - fonten -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  
+
   <body>
     <!-- burger menu -->
     <header>
       <button class="toggle-btn">☰</button>
       <nav id="headernav">
-        <ul>
+        <div class="ul">
           <div class="element_1">
-            <img src="logo.svg" alt="">
+            <img src="logo.svg" alt="" />
           </div>
           <div class="element_2">
-          <li><a href="#overskrift">Vårt galleri</a></li>
-          <li><a href="#footer">Kontakt oss</a></li>
+            <div class="li">
+              <a href="#overskrift">Vårt galleri</a>
+              <a href="#footer">Kontakt oss</a>
+            </div>
           </div>
-        </ul>
+        </div>
       </nav>
     </header>
 
@@ -37,7 +45,10 @@
         <div id="box1"></div>
         <div id="box2"></div>
         <div id="box3">
-          <h2>Se værkerne i vores <br> billedegalleri længere nede</h2>
+          <h2>
+            Se værkerne i vores <br />
+            billedegalleri længere nede
+          </h2>
         </div>
         <div id="box4">
           <h2 id="splashtoph2">Ceramic</h2>
@@ -48,52 +59,59 @@
       </section>
 
       <!-- ændringer herunder -->
-        <div class="hvem">
-          <h2>Hvem er vi?</h2>
-        </div>
+      <div class="hvem">
+        <h2>Hvem er vi?</h2>
+      </div>
       <div class="start_tekst">
         <div class="element_2">
           <p>
-          Vi er fem keramikere der blev færdiguddannede fra Det Kongelige Kunstakademi tilbage i 2019. Her valgte vi at skabe en online platform med mulighed for at udstille vores værker løbende. Målet var at lave en hjemmeside som både fungerer som vores individuelle online porteføljer, men et sted man også kan besøge for at finde inspiration. Hjemmesiden bliver løbende opdateret, da vi også gerne vil give upcoming-keramikere en mulighed for at udstille på hjemmesiden. I denne udstilling har vi alle haft samme udgangspunkt, nemlig: minimalisme og kontrasten mellem stringente former og organisk materiale.
-        </p>
+            Vi er fem keramikere der blev færdiguddannede fra Det Kongelige
+            Kunstakademi tilbage i 2019. Her valgte vi at skabe en online
+            platform med mulighed for at udstille vores værker løbende. Målet
+            var at lave en hjemmeside som både fungerer som vores individuelle
+            online porteføljer, men et sted man også kan besøge for at finde
+            inspiration. Hjemmesiden bliver løbende opdateret, da vi også gerne
+            vil give upcoming-keramikere en mulighed for at udstille på
+            hjemmesiden. I denne udstilling har vi alle haft samme udgangspunkt,
+            nemlig: minimalisme og kontrasten mellem stringente former og
+            organisk materiale.
+          </p>
+        </div>
       </div>
-        
-      </div>
-      
+
       <!-- filtrerrings knapper -->
       <div id="overskrift">
         <h1>Alle kunstnere</h1>
       </div>
 
-        <div class="filterpersoner">
-      <nav>
-        <button data-fornavn="Alle" class="valgt">Alle</button>
-        <button data-fornavn="Niels">Niels</button>
-        <button data-fornavn="Katrine">Katrine</button>
-        <button data-fornavn="Flora">Flora</button>
-        <button data-fornavn="Rie">Rie</button>
-        <button data-fornavn="David">David</button>
-      </nav>
+      <div class="filterpersoner">
+        <nav>
+          <button data-fornavn="Alle" class="valgt">Alle</button>
+          <button data-fornavn="Niels">Niels</button>
+          <button data-fornavn="Katrine">Katrine</button>
+          <button data-fornavn="Flora">Flora</button>
+          <button data-fornavn="Rie">Rie</button>
+          <button data-fornavn="David">David</button>
+        </nav>
       </div>
-  
 
- <!-- keramiker restdb -->
+      <!-- keramiker restdb -->
       <section id="personer">
         <template>
           <article>
             <div class="element_1">
-            <img src="" alt="" />
+              <img src="" alt="" />
             </div>
             <div class="element_2">
-            <h2 class="fornavn"></h2>
-            <h2 class="efternavn"></h2>
+              <h2 class="fornavn"></h2>
+              <h2 class="efternavn"></h2>
             </div>
             <div class="element_3">
-            <p class="om"></p>
+              <p class="om"></p>
             </div>
           </article>
         </template>
-        </section>
+      </section>
       <!-- ^^^^^^ -->
 
       <div class="billedegalleri">
@@ -117,9 +135,7 @@
       <!-- modal -->
       <aside id="modal">
         <article>
-          <div class="element_1">
-            <img src="" alt="" />
-          </div>
+          <div class="element_1"></div>
           <div class="element_2">
             <h2></h2>
             <br />
@@ -150,22 +166,23 @@
           <p>David Krak</p>
           <p>Rie Straek</p>
         </div>
+      </div>
 
-        <div class="Kontakter">
-
-          <h2>Kontakter</h2>
-          <p>         
-          <a href="https://mail.google.com/">Niels.Bertelsen@gmail.com</a>         
-          </p>    
-          <p>
+      <div class="Kontakter">
+        <h2>Kontakter</h2>
+        <p>
+          <a href="https://mail.google.com/">Niels.Bertelsen@gmail.com</a>
+        </p>
+        <p>
           <a href="https://mail.google.com/">Katrine.Maja@gmail.com</a>
-          </p>          
-          <p>         
-          <a href="https://mail.google.com/">Flora.Flint@gmail.com</a> </p>
-          <p>
+        </p>
+        <p>
+          <a href="https://mail.google.com/">Flora.Flint@gmail.com</a>
+        </p>
+        <p>
           <a href="https://mail.google.com/">David.Krak@gmail.com</a>
-          </p><p><a href="https://mail.google.com/">Rie.Straek@gmail.com</a>
-          </p>
+        </p>
+        <p><a href="https://mail.google.com/">Rie.Straek@gmail.com</a></p>
 
         <div class="klikbarlogo">
           <a href="index.html#forside">
