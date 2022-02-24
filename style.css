@@ -133,6 +133,7 @@ body {
 #splashtoph2 {
   margin-bottom: 1rem;
   text-decoration: underline solid black 2px;
+  font-size: 3rem;
 }
 
 #box5 {
@@ -152,32 +153,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-/* footer {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: white;
-  outline: solid 1px black;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 5rem;
-} */
-
-/* footer p {
-  grid-row: 1/1;
-  /* text-align: left; */
-/*   margin-top: -0.5rem;
-} */
-
-/* footer .topfoot {
-  grid-row: 2/2;
-  margin-left: -7rem;
-} */
-
-/* footer .buttomfoot {
-  grid-row: 3/3;
-  margin-left: 4rem;
-} */
 
 #toppy {
   grid-row: 2/2;
@@ -288,14 +263,17 @@ article {
 h2 {
   font-family: "Lobster", cursive;
   line-height: 1.5rem;
+  font-size: 2rem;
   /* margin: 5px; */
 }
 h3 {
   font-family: "Lobster", cursive;
+  font-size: 1.5rem;
 }
 p {
   font-family: "Raleway", sans-serif;
   line-height: 1.5rem;
+  font-size: 1rem;
   /* cursor: pointer; */
   /* padding: 50px; */
 }
@@ -322,6 +300,7 @@ h1 {
   justify-content: center;
   font-family: "Lobster", cursive;
   margin: 20px;
+  font-size: 2.5rem;
 }
 
 .valgt {
