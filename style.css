@@ -21,7 +21,7 @@ img {
 
 /* menu */
 
-ul {
+.ul {
   list-style-type: none;
   overflow: hidden;
   display: flex;
@@ -33,21 +33,22 @@ ul {
 }
 
 @media (min-width: 500px) {
-  ul {
+  .ul {
     background-color: #f2eae1;
   }
 }
-li a {
+.li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  margin-right: 50px;
 }
 
-li a:hover {
+.li a:hover {
   color: #ffffff;
 }
 
 @media (min-width: 500px) {
-  li a:hover {
+  .li a:hover {
     color: #737864;
   }
 }
@@ -624,7 +625,7 @@ footer {
     margin: 10px;
   }
 
-  nav ul {
+  nav .ul {
     display: flex;
     flex-flow: column;
   }
