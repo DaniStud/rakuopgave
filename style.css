@@ -28,13 +28,17 @@ img {
   justify-content: space-between;
   gap: 40px;
   font-family: "Raleway", sans-serif;
-  margin: 25px;
+  margin: 15px;
   background-color: #737864;
 }
 
 @media (min-width: 500px) {
   .ul {
     background-color: #f2eae1;
+  }
+
+  .li a:hover {
+    color: #737864;
   }
 }
 .li a {
@@ -47,14 +51,8 @@ img {
   color: #ffffff;
 }
 
-@media (min-width: 500px) {
-  .li a:hover {
-    color: #737864;
-  }
-}
-
 #headernav .element_1 {
-  width: 50%;
+  width: 50px;
   margin-left: 90px;
 }
 
@@ -62,7 +60,7 @@ img {
   display: flex;
   gap: 60px;
   margin: 10px;
-  margin-top: 0px;
+
   font-size: 1.2rem;
   place-content: center;
 }
@@ -78,9 +76,16 @@ body {
 
 #forside {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 100vw;
   min-height: 66vh;
+}
+
+.splashlogo img {
+  max-width: 250px;
+}
+.box4 img {
+  justify-content: center;
 }
 
 #box2 {
@@ -100,10 +105,6 @@ body {
   text-align: center;
 }
 
-#box3 h2 {
-  margin-top: 5rem;
-}
-
 #box4 {
   min-height: 5rem;
   background-color: #737864;
@@ -111,31 +112,15 @@ body {
   grid-column: 1/1;
   grid-row: 3/4;
   text-align: center;
-  padding-top: 5rem;
-}
-
-#splashtoph2 {
-  margin-bottom: 1rem;
-  text-decoration: underline solid black 2px;
-  font-size: 3rem;
+  padding-top: 2rem;
 }
 
 #box6 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
-  grid-column: 1/1;
-  grid-row: 5/6;
-  background-size: cover;
-  background-position: center;
+  display: none;
 }
 
 #box5 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
-  grid-column: 1/1;
-  grid-row: 5/6;
-  background-size: cover;
-  background-position: center;
+  display: none;
 }
 
 #toppy {
@@ -220,7 +205,30 @@ body {
   margin-top: 20px;
 }
 
+@media (min-width: 1200px) {
+  #box6 {
+    display: block;
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
+    grid-column: 1/1;
+    grid-row: 5/6;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 @media (min-width: 500px) {
+  /* SPLASH */
+  #box5 {
+    display: block;
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
+    grid-column: 1/1;
+    grid-row: 5/6;
+    background-size: cover;
+    background-position: center;
+  }
+
   .billedegalleri {
     margin-left: 80px;
   }
@@ -440,12 +448,6 @@ footer {
     padding-top: 5rem;
   }
 
-  #splashtoph2 {
-    margin-bottom: 1rem;
-    text-decoration: underline solid black 2px;
-    font-size: 3rem;
-  }
-
   #box5 {
     min-height: 5rem;
     background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
@@ -483,7 +485,7 @@ footer {
     gap: 30px;
   }
   #headernav .element_1 {
-    width: 15%;
+    width: 30px;
   }
   #personer .element_1 {
     display: flex;
