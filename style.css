@@ -41,9 +41,6 @@ ul .element_2 {
   gap: 40px;
   margin: 10px;
 }
-ul .element_1 {
-  width: 10px;
-}
 
 li a {
   /* display: block; */
@@ -63,7 +60,7 @@ header {
 }
 
 #headernav .element_1 {
-  width: 50%;
+  width: 200px;
 }
 
 /* ------------------------------------------- */
@@ -77,11 +74,10 @@ body {
 
 #forside {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   width: 100vw;
   min-height: 66vh;
 }
-
 
 #box2 {
   min-height: 5rem;
@@ -96,12 +92,8 @@ body {
   min-height: 5rem;
   background-color: #737864;
   grid-column: 1/1;
-  grid-row: 4/5;
+  grid-row: 4;
   text-align: center;
-}
-
-#box3 h2 {
-  margin-top: 5rem;
 }
 
 #box4 {
@@ -111,7 +103,7 @@ body {
   grid-column: 1/1;
   grid-row: 3/4;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 #splashtoph2 {
@@ -121,21 +113,11 @@ body {
 }
 
 #box5 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
-  grid-column: 1/1;
-  grid-row: 5/6;
-  background-size: cover;
-  background-position: center;
+  display: none;
 }
 
 #box6 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
-  grid-column: 1/1;
-  grid-row: 5/6;
-  background-size: cover;
-  background-position: center;
+  display: none;
 }
 
 #toppy {
@@ -147,8 +129,6 @@ body {
   max-height: 5vh;
   max-width: 5vh;
 }
-
-
 
 /* ------------------------------------------- */
 
@@ -266,7 +246,7 @@ p {
 
 button {
   background-color: #73786473;
-  padding: .2rem;
+  padding: 0.2rem;
   font-family: "Raleway", sans-serif;
   line-height: 1.5rem;
   cursor: pointer;
@@ -382,90 +362,110 @@ footer {
 
 /* ------------------------------------------- */
 
+/* TABLET */
+@media (min-width: 1200px) {
+  #box6 {
+    display: block;
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
+    grid-column: 1/1;
+    grid-row: 5/6;
+    background-size: cover;
+    background-position: center;
+  }
+}
+/* ------------------------------------------- */
+
 /* web version */
-@media (min-width: 500px) {
+@media (min-width: 800px) {
+  #box5 {
+    display: block;
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
+    grid-column: 1/1;
+    grid-row: 5/6;
+    background-size: cover;
+    background-position: center;
+  }
 
   /* forside skærmen */
 
-#forside {
-  display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr;
+  #forside {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr; */
-  grid-template: repeat(3, 1fr);
-  /* aspect-ratio: 16/9; */
-  /* height: 100vh; */
-  width: 100vw;
-  min-height: 90vh;
-}
+    grid-template: repeat(3, 1fr);
+    /* aspect-ratio: 16/9; */
+    /* height: 100vh; */
+    width: 100vw;
+    min-height: 90vh;
+  }
 
-/* Splash pc */
-#box2 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/pexels-photo-4706115.jpeg);
-  grid-column: 1/1;
-  grid-row: 1/3;
-  background-size: cover;
-  background-position: center;
-}
+  /* Splash pc */
+  #box2 {
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/pexels-photo-4706115.jpeg);
+    grid-column: 1/1;
+    grid-row: 1/3;
+    background-size: cover;
+    background-position: center;
+  }
 
-#box3 {
-  min-height: 5rem;
-  background-color: #737864;
-  grid-column: 1/1;
-  grid-row: 3/3;
-  text-align: center;
-}
+  #box3 {
+    min-height: 5rem;
+    background-color: #737864;
+    grid-column: 1/1;
+    grid-row: 3/3;
+    text-align: center;
+  }
 
-#box3 h2 {
-  margin-top: 5rem;
-}
+  #box3 h2 {
+    margin-top: 5rem;
+  }
 
-#box4 {
-  min-height: 5rem;
-  background-color: #737864;
-  background-size: cover;
-  grid-column: 2/2;
-  grid-row: 1/2;
-  text-align: center;
-  padding-top: 5rem;
-}
+  #box4 {
+    min-height: 5rem;
+    background-color: #737864;
+    background-size: cover;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    text-align: center;
+    padding-top: 5rem;
+  }
 
-#splashtoph2 {
-  margin-bottom: 1rem;
-  text-decoration: underline solid black 2px;
-  font-size: 3rem;
-}
+  #splashtoph2 {
+    margin-bottom: 1rem;
+    text-decoration: underline solid black 2px;
+    font-size: 3rem;
+  }
 
-#box5 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
-  grid-column: 2/2;
-  grid-row: 2/4;
-  background-size: cover;
-  background-position: center;
-}
+  #box5 {
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/pexels-photo-10572089.jpeg);
+    grid-column: 2/2;
+    grid-row: 2/4;
+    background-size: cover;
+    background-position: center;
+  }
 
-#box6 {
-  min-height: 5rem;
-  background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
-  grid-column: 3/3;
-  grid-row: 1/4;
-  background-size: cover;
-  background-position: center;
-}
+  #box6 {
+    min-height: 5rem;
+    background-image: url(/forsidebilleder/photo-1590422749897-47036da0b0ff.jpeg);
+    grid-column: 3/3;
+    grid-row: 1/4;
+    background-size: cover;
+    background-position: center;
+  }
 
-#toppy {
-  grid-row: 2/2;
-  margin-top: 1rem;
-  justify-content: right;
-  outline: solid 1px black;
-  padding: 0.2rem;
-  max-height: 5vh;
-  max-width: 5vh;
-}
-
-
-
+  #toppy {
+    grid-row: 2/2;
+    margin-top: 1rem;
+    justify-content: right;
+    outline: solid 1px black;
+    padding: 0.2rem;
+    max-height: 5vh;
+    max-width: 5vh;
+  }
 
   /* nav */
   .filterpersoner {
@@ -476,7 +476,7 @@ footer {
     gap: 30px;
   }
   #headernav .element_1 {
-    width: 15%;
+    width: 200px;
   }
 
   /* kunstnerne */
@@ -573,7 +573,6 @@ footer {
 
 /* ------------------------------------------- */
 
-
 /* burger menu */
 
 .toggle-btn {
@@ -618,4 +617,3 @@ footer {
     position: fixed;
   }
 }
-
